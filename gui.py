@@ -1,4 +1,10 @@
+# -*- coding: utf-8 -*-
 
+# Form implementation generated from reading ui file './gui.ui'
+#
+# Created by: PyQt4 UI code generator 4.11.4
+#
+# WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
 
@@ -64,6 +70,72 @@ class Ui_MainWindow(object):
         self.lcdNumber.setProperty("value", 0.0)
         self.lcdNumber.setProperty("intValue", 0)
         self.lcdNumber.setObjectName(_fromUtf8("lcdNumber"))
+        self.horizontalSlider_2 = QtGui.QSlider(self.centralwidget)
+        self.horizontalSlider_2.setGeometry(QtCore.QRect(280, 90, 160, 29))
+        self.horizontalSlider_2.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_2.setObjectName(_fromUtf8("horizontalSlider_2"))
+        self.lcdNumber_2 = QtGui.QLCDNumber(self.centralwidget)
+        self.lcdNumber_2.setGeometry(QtCore.QRect(470, 90, 64, 23))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Ubuntu"))
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.lcdNumber_2.setFont(font)
+        self.lcdNumber_2.setStyleSheet(_fromUtf8("backgroud-color: rgb(255, 255, 255);\n"
+""))
+        self.lcdNumber_2.setFrameShape(QtGui.QFrame.Box)
+        self.lcdNumber_2.setSmallDecimalPoint(False)
+        self.lcdNumber_2.setNumDigits(2)
+        self.lcdNumber_2.setDigitCount(2)
+        self.lcdNumber_2.setProperty("value", 0.0)
+        self.lcdNumber_2.setProperty("intValue", 0)
+        self.lcdNumber_2.setObjectName(_fromUtf8("lcdNumber_2"))
+        self.label_2 = QtGui.QLabel(self.centralwidget)
+        self.label_2.setGeometry(QtCore.QRect(200, 100, 68, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Ubuntu"))
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet(_fromUtf8("font: 75 11pt \"Ubuntu\";"))
+        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.horizontalSlider_3 = QtGui.QSlider(self.centralwidget)
+        self.horizontalSlider_3.setGeometry(QtCore.QRect(280, 130, 160, 29))
+        self.horizontalSlider_3.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSlider_3.setObjectName(_fromUtf8("horizontalSlider_3"))
+        self.lcdNumber_3 = QtGui.QLCDNumber(self.centralwidget)
+        self.lcdNumber_3.setGeometry(QtCore.QRect(470, 130, 64, 23))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Ubuntu"))
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.lcdNumber_3.setFont(font)
+        self.lcdNumber_3.setStyleSheet(_fromUtf8("backgroud-color: rgb(255, 255, 255);\n"
+""))
+        self.lcdNumber_3.setFrameShape(QtGui.QFrame.Box)
+        self.lcdNumber_3.setSmallDecimalPoint(False)
+        self.lcdNumber_3.setNumDigits(2)
+        self.lcdNumber_3.setDigitCount(2)
+        self.lcdNumber_3.setProperty("value", 0.0)
+        self.lcdNumber_3.setProperty("intValue", 0)
+        self.lcdNumber_3.setObjectName(_fromUtf8("lcdNumber_3"))
+        self.label_3 = QtGui.QLabel(self.centralwidget)
+        self.label_3.setGeometry(QtCore.QRect(200, 140, 68, 17))
+        font = QtGui.QFont()
+        font.setFamily(_fromUtf8("Ubuntu"))
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(9)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet(_fromUtf8("font: 75 11pt \"Ubuntu\";"))
+        self.label_3.setObjectName(_fromUtf8("label_3"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
@@ -75,11 +147,15 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QObject.connect(self.horizontalSlider, QtCore.SIGNAL(_fromUtf8("valueChanged(int)")), self.lcdNumber.display)
+        QtCore.QObject.connect(self.horizontalSlider_2, QtCore.SIGNAL(_fromUtf8("valueChanged(int)")), self.lcdNumber_2.display)
+        QtCore.QObject.connect(self.horizontalSlider_3, QtCore.SIGNAL(_fromUtf8("valueChanged(int)")), self.lcdNumber_3.display)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.label.setText(_translate("MainWindow", "Lecturas", None))
+        self.label_2.setText(_translate("MainWindow", "Edad", None))
+        self.label_3.setText(_translate("MainWindow", "Peso", None))
 
 
 if __name__ == "__main__":
