@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file './gui.ui'
 
 
 from PyQt4 import QtCore, QtGui
