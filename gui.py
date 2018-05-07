@@ -5,6 +5,7 @@
 # Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
+import os
 
 from PyQt4 import QtCore, QtGui
 
@@ -25,7 +26,7 @@ except AttributeError:
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(800, 600)
+        MainWindow.resize(788, 600)
         font = QtGui.QFont()
         font.setFamily(_fromUtf8("Ubuntu"))
         font.setPointSize(11)
@@ -39,6 +40,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.horizontalSlider = QtGui.QSlider(self.centralwidget)
         self.horizontalSlider.setGeometry(QtCore.QRect(280, 40, 160, 29))
+        self.horizontalSlider.setProperty("value", 13)
         self.horizontalSlider.setOrientation(QtCore.Qt.Horizontal)
         self.horizontalSlider.setObjectName(_fromUtf8("horizontalSlider"))
         self.label = QtGui.QLabel(self.centralwidget)
@@ -136,9 +138,17 @@ class Ui_MainWindow(object):
         self.label_3.setFont(font)
         self.label_3.setStyleSheet(_fromUtf8("font: 75 11pt \"Ubuntu\";"))
         self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.txtResult = QtGui.QLineEdit(self.centralwidget)
+        self.txtResult.setGeometry(QtCore.QRect(290, 240, 113, 27))
+        self.txtResult.setStyleSheet(_fromUtf8("background-color:rgb(255, 255, 255);"))
+        self.txtResult.setObjectName(_fromUtf8("txtResult"))
+        self.btnClear = QtGui.QPushButton(self.centralwidget)
+        self.btnClear.setGeometry(QtCore.QRect(300, 330, 99, 27))
+        self.btnClear.setStyleSheet(_fromUtf8("background-color: rgb(255, 255, 255);"))
+        self.btnClear.setObjectName(_fromUtf8("btnClear"))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 25))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 788, 25))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -149,13 +159,20 @@ class Ui_MainWindow(object):
         QtCore.QObject.connect(self.horizontalSlider, QtCore.SIGNAL(_fromUtf8("valueChanged(int)")), self.lcdNumber.display)
         QtCore.QObject.connect(self.horizontalSlider_2, QtCore.SIGNAL(_fromUtf8("valueChanged(int)")), self.lcdNumber_2.display)
         QtCore.QObject.connect(self.horizontalSlider_3, QtCore.SIGNAL(_fromUtf8("valueChanged(int)")), self.lcdNumber_3.display)
+        QtCore.QObject.connect(self.btnClear, QtCore.SIGNAL(_fromUtf8("clicked()")), self.debugear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def debugear(self):
+        print("hola from debugear")
+        print(self.txtResult.value)
+        print("end fn")
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow", None))
         self.label.setText(_translate("MainWindow", "Lecturas", None))
         self.label_2.setText(_translate("MainWindow", "Edad", None))
         self.label_3.setText(_translate("MainWindow", "Peso", None))
+        self.btnClear.setText(_translate("MainWindow", "Clear", None))
 
 
 if __name__ == "__main__":
