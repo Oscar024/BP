@@ -164,7 +164,7 @@ class Ui_MainWindow(object):
 
     def debugear(self):
         print("hola from debugear")
-        print(self.txtResult.value)
+        print(self.txtResult.text())
         print("end fn")
 
     def retranslateUi(self, MainWindow):
